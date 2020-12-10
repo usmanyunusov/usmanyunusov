@@ -1,0 +1,21 @@
+{
+  "name": "readme_bot",
+  "version": "1.0.0",
+  "main": "run.js",
+  "scripts": {
+    "build": "node ./run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usmanyunusov/usmanyunusov.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usmanyunusov/usmanyunusov/issues"
+  },
+  "homepage": "https://github.com/usmanyunusov/usmanyunusov#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}

@@ -4,7 +4,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '0 9 * * *'
 
 jobs:
   build:
@@ -15,7 +15,15 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
-    - name: Node
+    - name: Install node and build
       uses: actions/setup-node@v1
-    - name: render
-      run: node ./run.js
+    - run: npm install
+    - run: npm run build
+    - name: Create file
+      run: node ./createReadme.js
+    - name: Commit and push if changed
+      run: |
+        git config --global user.email "usman.iunusov@gmail.com"
+        git config --global user.name "usmanyunusov"
+        git commit -am "Updated content"
+        git push
