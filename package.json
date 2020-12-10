@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "run.js",
   "scripts": {
-    "build": "node ./run.js"
+    "build": "node ./createReadme.js"
   },
   "repository": {
     "type": "git",
