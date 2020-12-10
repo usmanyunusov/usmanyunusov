@@ -1,0 +1,21 @@
+name: Build README
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '32 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Node
+      uses: actions/setup-node@v1
+    - name: render
+      run: node ./run.js
