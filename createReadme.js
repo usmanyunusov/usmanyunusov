@@ -1,4 +1,5 @@
 const request = require('request')
+const dayjs = require('dayjs');
 const fs = require('fs')
 
 request(
@@ -7,24 +8,13 @@ request(
   (err, _, articles) => {
     if (err) throw err
 
-    let readmeText = `Последние статьи из [frontendtoday.ru](https://frontendtoday.ru/):\n`
+    let readmeText = `👨‍💻 Последние статьи из [frontendtoday.ru](https://frontendtoday.ru/):\n`
 
     articles.forEach((article) => {
       readmeText += `- [${article.title}](${article.url})\n`
     })
 
-    const updateTime = new Date()
-    readmeText += `---\n *Обновлено ${
-      updateTime.getDate() +
-      '-' +
-      (updateTime.getMonth() + 1) +
-      '-' +
-      updateTime.getFullYear() +
-      ' ' +
-      updateTime.getHours() +
-      ':' +
-      updateTime.getMinutes()
-    }*`
+    readmeText += `\n*\`Обновлено ${dayjs().format('YYYY-MM-DD HH:mm')}\`*`
 
     fs.writeFile('README.md', readmeText, function (err) {
       if (err) throw err

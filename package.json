@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/usmanyunusov/usmanyunusov#readme",
   "dependencies": {
+    "dayjs": "^1.9.7",
     "request": "^2.88.2"
   }
 }
