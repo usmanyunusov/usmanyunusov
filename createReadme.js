@@ -8,7 +8,7 @@ request(
   (err, _, articles) => {
     if (err) throw err
 
-    let readmeText = `👨‍💻 Последние статьи из [frontendtoday.ru](https://frontendtoday.ru/):\n`
+    let readmeText = `👨‍💻 Последние статьи из **[моего блога](https://frontendtoday.ru/)**:\n`
 
     articles.forEach((article) => {
       readmeText += `- [${article.title}](${article.url})\n`
