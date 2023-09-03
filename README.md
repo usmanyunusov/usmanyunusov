@@ -2,4 +2,4 @@
 - [Темный режим и как его лучше делать](https://frontendtoday.ru/articles/dark-mode-best-practice/)
 - [История флексбокс (-moz-box, -ms-flexbox, -webkit-flex)](https://frontendtoday.ru/articles/flexbox-history/)
 
-*`Обновлено 2023-09-02 09:01`*
+*`Обновлено 2023-09-03 09:01`*
